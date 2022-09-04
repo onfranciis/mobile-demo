@@ -6,6 +6,7 @@ export const Colors = {
   White: "#FFFFFF",
   Black: "#000000",
   Shades: {
+    // <-- Primary Shades --
     50: "#EFF6FF",
     100: "#DBEAFE",
     200: "#BFDBFE",
