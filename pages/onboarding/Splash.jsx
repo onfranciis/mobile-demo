@@ -5,7 +5,7 @@ import { Colors } from "../../Config";
 const Splash = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text} onPress={() => navigation.navigate("Home")}>
+      <Text style={styles.text} onPress={() => navigation.navigate("Main")}>
         Go Viral!
       </Text>
     </View>
@@ -16,6 +16,7 @@ export default Splash;
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "white",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
