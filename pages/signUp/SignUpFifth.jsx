@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
+  StatusBar,
 } from "react-native";
 import React, { useState } from "react";
 
@@ -31,7 +32,7 @@ const SignUpFifth = ({ navigation, setDisplay }) => {
     if (password1 !== password2) {
       setPrompt("match");
     }
-    navigation.navigate("Home");
+    navigation.navigate("Main");
   };
 
   return (
@@ -119,6 +120,7 @@ const styles = StyleSheet.create({
     // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
   },
   text: {
     // backgroundColor: "red",

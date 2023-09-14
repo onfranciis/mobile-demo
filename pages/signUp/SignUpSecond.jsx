@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
+  StatusBar,
 } from "react-native";
 import React, { useState } from "react";
 import IntlPhoneField from "react-native-intl-phone-field";
@@ -101,6 +102,7 @@ const styles = StyleSheet.create({
     // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
   },
   text: {
     // backgroundColor: "red",

@@ -16,6 +16,14 @@ import Home from "../pages/home/Home";
 import MainContainer from "./MainContainer";
 import NewContest from "../pages/contests/NewContest";
 import NewContest2 from "../pages/contests/NewContest2";
+import MessagesChat from "../pages/messages/MessagesChat";
+import ContestCover from "../pages/contests/ContestCover";
+import Profile from "../pages/home/Profile";
+import ProfileSettings from "../pages/others/ProfileSettings";
+import ManageAccount from "../pages/others/ManageAccount";
+import Security from "../pages/others/Security";
+import Privacy from "../pages/others/Privacy";
+import CommentsSettings from "../pages/others/CommentsSettings";
 
 const Routes = () => {
   return (
@@ -36,6 +44,14 @@ const Routes = () => {
         <Stack.Screen name="Main" component={MainContainer} />
         <Stack.Screen name="NewContest" component={NewContest} />
         <Stack.Screen name="NewContest2" component={NewContest2} />
+        <Stack.Screen name="MessagesChat" component={MessagesChat} />
+        <Stack.Screen name="ContestCover" component={ContestCover} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="ProfileSettings" component={ProfileSettings} />
+        <Stack.Screen name="ManageAccount" component={ManageAccount} />
+        <Stack.Screen name="Security" component={Security} />
+        <Stack.Screen name="Privacy" component={Privacy} />
+        <Stack.Screen name="CommentsSettings" component={CommentsSettings} />
       </Stack.Navigator>
     </NavigationContainer>
   );

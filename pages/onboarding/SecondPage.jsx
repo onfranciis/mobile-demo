@@ -1,4 +1,11 @@
-import { ScrollView, StyleSheet, Text, View, Dimensions } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  StatusBar,
+} from "react-native";
 import React, { useState } from "react";
 
 import TopNavigation from "./TopNavigation";
@@ -77,13 +84,11 @@ export default SecondPage;
 const styles = StyleSheet.create({
   container: {
     width: Dimensions.get("window").width,
-    // backgroundColor: "red",
-    // height: "100vh",
     flex: 1,
     flexDirection: "column",
-    // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
   },
   text: {
     // backgroundColor: "red",

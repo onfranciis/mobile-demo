@@ -8,8 +8,8 @@ import {
 import React from "react";
 
 import { Colors } from "../../Config";
-import Back from "../../assets/Images/BackArrow.png";
-import Info from "../../assets/Images/InfoIcon.png";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const TopNavigation = (props) => {
   return (
@@ -18,12 +18,12 @@ const TopNavigation = (props) => {
         style={styles.backParent}
         onPress={() => props.navigation.goBack()}
       >
-        <Image style={styles.back} source={Back} />
+        <MaterialIcons name="arrow-back-ios" color={Colors.Black} size={24} />
       </TouchableWithoutFeedback>
 
       <View style={styles.infoParent}>
         {props.Info ? (
-          <Image style={styles.info} source={Info} />
+          <MaterialIcons name="info-outline" color={Colors.Black} size={24} />
         ) : (
           <Text style={styles.skip}>Skip</Text>
         )}
@@ -37,12 +37,10 @@ export default TopNavigation;
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    // backgroundColor: "red",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    // paddingHorizontal: 20,
-    paddingVertical: 15,
+    // paddingVertical: 15,
   },
   backParent: {
     paddingVertical: 10,

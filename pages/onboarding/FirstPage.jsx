@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import TopNavigation from "./TopNavigation";
 import ButtonSections from "./ButtonSections1";
@@ -18,7 +18,9 @@ const FirstPage = ({ navigation }) => {
         </Text>
       </View>
 
-      <ButtonSections CreateAccount={() => navigation.navigate("Second")} />
+      <ButtonSections
+        CreateAccount={() => navigation.navigate("SignUpFirst")}
+      />
 
       <View>
         <Text style={styles.tos}>
@@ -49,6 +51,7 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 20,
     flex: 1,
+    paddingTop: StatusBar.currentHeight,
   },
   text: {
     // backgroundColor: "red",

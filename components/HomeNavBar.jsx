@@ -7,18 +7,22 @@ import {
   View,
 } from "react-native";
 import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import Feather from "react-native-vector-icons/Feather";
 
-const HomeNavBar = () => {
+const HomeNavBar = ({ navigation }) => {
   const [category, setCategory] = useState(true);
 
   return (
     <View style={styles.container}>
-      <View style={styles.picParent}>
-        <Image
-          style={styles.pic}
-          source={require("../assets/Images/dude.png")}
-        />
-      </View>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Profile")}>
+        <View style={styles.picParent}>
+          <Image
+            style={styles.pic}
+            source={require("../assets/Images/dude.png")}
+          />
+        </View>
+      </TouchableWithoutFeedback>
       <View style={styles.sections}>
         <TouchableWithoutFeedback onPress={() => setCategory(true)}>
           <Text
@@ -43,10 +47,7 @@ const HomeNavBar = () => {
         </TouchableWithoutFeedback>
       </View>
       <View>
-        <Image
-          style={styles.search}
-          source={require("../assets/Images/search.png")}
-        />
+        <Feather name="search" color="white" size={24} />
       </View>
     </View>
   );

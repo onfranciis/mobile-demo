@@ -5,7 +5,7 @@ import { Colors } from "../../Config";
 const Splash = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text} onPress={() => navigation.navigate("Main")}>
+      <Text style={styles.text} onPress={() => navigation.navigate("First")}>
         Go Viral!
       </Text>
     </View>

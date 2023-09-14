@@ -1,4 +1,11 @@
-import { ScrollView, StyleSheet, Text, View, Dimensions } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  StatusBar,
+} from "react-native";
 import React, { useState } from "react";
 
 import TopNavigation from "./TopNavigation";
@@ -78,7 +85,7 @@ const ThirdPage = ({ navigation }) => {
           Text1="Skip for now"
           Text2="Next"
           Text1Function={() => navigation.goBack()}
-          Text2Function={() => navigation.navigate("Third")}
+          Text2Function={() => navigation.navigate("Main")}
         />
       </View>
     </ScrollView>
@@ -91,12 +98,11 @@ const styles = StyleSheet.create({
   container: {
     width: Dimensions.get("window").width,
     backgroundColor: "white",
-    // height: "100vh",
     flex: 1,
     flexDirection: "column",
-    // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
   },
   text: {
     // backgroundColor: "red",

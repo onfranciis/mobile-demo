@@ -7,6 +7,7 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Platform,
+  StatusBar,
 } from "react-native";
 import React, { useState } from "react";
 
@@ -83,6 +84,7 @@ const styles = StyleSheet.create({
     // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
   },
   text: {
     // backgroundColor: "red",

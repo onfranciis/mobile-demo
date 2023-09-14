@@ -5,12 +5,13 @@ import { StatusBar } from "react-native";
 import FirstPage from "./pages/onboarding/FirstPage";
 import SecondPage from "./pages/onboarding/SecondPage";
 import ThirdPage from "./pages/onboarding/ThirdPage";
+import SignUpFirst from "./pages/signUp/SignUpFirst";
 import Routes from "./screens/Routes";
 
 export default function App() {
   return (
     <>
-      <StatusBar />
+      {/* <StatusBar /> */}
       <Routes />
     </>
   );

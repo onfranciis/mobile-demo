@@ -8,6 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
+  StatusBar,
 } from "react-native";
 import React, { useRef, useState } from "react";
 
@@ -200,7 +201,9 @@ const SignUpFourth = ({ route, navigation, setDisplay }) => {
             if (e.length == 0) {
               input3Ref.current.focus();
             } else {
+              input4Ref.current.blur();
               checkFields();
+              // onCompleted();
             }
           }}
           onFocus={() => {
@@ -257,6 +260,7 @@ const styles = StyleSheet.create({
     // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingTop: StatusBar.currentHeight,
   },
   timerDetails: {
     marginVertical: 10,
